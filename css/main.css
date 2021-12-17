@@ -85,8 +85,7 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-footer-button:hover,
-.hero-footer-button:focus {
+.hero-footer-button:hover, .hero-footer-button:focus {
   background-color: var(--primary-white-color);
   color: var(--accent-color);
 }
@@ -119,24 +118,27 @@ button {
   padding-left: 15px;
 }
 
-/* Заголовки */
-.title,
-.section-title {
-  color: var(--title-text-color);
-}
-
-.section-title {
-  margin-top: 0;
-  margin-bottom: 50px;
+/* лого шапки*/
+.logo {
+  color: var(--accent-color);
+  font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
 }
 
-.title {
-  margin-top: 0;
-  margin-bottom: 10px;
+.logo--header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.logo__inner--color-dark {
+  color: #000;
+}
+
+.logo__inner--color-light {
+  color: #ffffff;
 }
 
 /* Модальное окно */
@@ -164,6 +166,10 @@ button {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
 .modal-close-btn {
   position: absolute;
   right: 8px;
@@ -179,8 +185,7 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:hover,
-.modal-close-btn:focus {
+.modal-close-btn:hover, .modal-close-btn:focus {
   color: var(--accent-color);
 }
 
@@ -192,10 +197,6 @@ button {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.2);
 }
 
 .modal-form {
@@ -247,10 +248,6 @@ button {
   border-color: var(--accent-color);
 }
 
-.modal-input:focus + .input-icon {
-  fill: var(--accent-color);
-}
-
 .input-wrap {
   position: relative;
 }
@@ -261,6 +258,10 @@ button {
   top: 50%;
   transform: translateY(-50%);
   color: var(--title-text-color);
+}
+
+.modal-input:focus + .input-icon {
+  fill: var(--accent-color);
 }
 
 .modal-text {
@@ -281,11 +282,6 @@ button {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
-}
-
-.check-link {
-  color: var(--accent-color);
-  margin-left: 5px;
 }
 
 .check-text::before {
@@ -319,39 +315,31 @@ button {
   background-color: var(--accent-color);
 }
 
-/* лого шапки*/
-.header-logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  color: #000;
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  text-decoration: none;
-}
-
-.accent {
+.check-link {
   color: var(--accent-color);
+  margin-left: 5px;
 }
 
-.footer-logo {
-  color: var(--primary-white-color);
-  font-family: Raleway, sans-serif;
+/* Заголовки */
+.section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  text-decoration: none;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: var(--title-text-color);
 }
 
-.footer-logo-adress {
-  display: block;
-  margin-right: 70px;
+.title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--title-text-color);
 }
 
 /* Навигация и контакты */
-.header-flex,
-.header-nav {
+.header__container,
+.nav {
   display: flex;
   align-items: center;
 }
@@ -360,33 +348,23 @@ button {
   border-bottom: 1px solid #ececec;
 }
 
-.header-nav-list {
-  display: flex;
-  margin-left: 93px;
-}
-
-.header-contacts {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.header-nav-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.header-contacts-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.header-nav-list,
-.header-contacts {
+.nav-list,
+.contacts {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
-.header-nav-link {
+.nav-list {
+  display: flex;
+  margin-left: 93px;
+}
+
+.nav-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav-list__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -395,7 +373,36 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-contacts-link {
+.nav-list__item {
+  position: relative;
+}
+
+.nav-list__link--current::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  background-color: var(--accent-color);
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.nav-list__link:hover, .nav-list__link:focus, .nav-list__link--current {
+  color: var(--accent-color);
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.contacts__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts__link {
   display: flex;
   align-items: center;
   padding-top: 32px;
@@ -405,34 +412,13 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-icon {
+.contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
 
-.header-nav-link:hover,
-.header-nav-link:focus,
-.header-contacts-link:hover,
-.header-contacts-link:focus,
-.header-icon:hover,
-.header-icon:focus,
-.header-nav-link.current {
+.contacts__link:hover, .contacts__link:focus, .contacts__icon:hover, .contacts__icon:focus {
   color: var(--accent-color);
-}
-
-.header-nav-item {
-  position: relative;
-}
-
-.header-nav-link.current::after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  content: "";
-  background-color: var(--accent-color);
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
 }
 
 /* Герой */
@@ -451,14 +437,14 @@ button {
   background-size: cover;
 }
 
-.hero-flex {
+.hero__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.hero-title {
+.hero__title {
   max-width: 696px;
   margin-top: 0;
   margin-bottom: 30px;
@@ -779,6 +765,11 @@ button {
 .footer-flex {
   display: flex;
   align-items: baseline;
+}
+
+.footer-f {
+  display: block;
+  margin-right: 70px;
 }
 
 .footer-contacts {
