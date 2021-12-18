@@ -1,17 +1,17 @@
 /* Чем мы занимаемся */
-.work-list {
+.work__list {
   display: flex;
 }
 
-.work-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.work-item {
+.work__item {
   position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
-.work-caption {
+.work__caption {
   position: absolute;
   bottom: 0;
   left: 0;
