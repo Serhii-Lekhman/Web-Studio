@@ -11,14 +11,25 @@
 
 .nav-list,
 .contacts {
+  @include mq(mobile-only) {
+    display: none;
+  }
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
 .nav-list {
-  display: flex;
-  margin-left: 93px;
+  @include mq(tablet-only) {
+    display: flex;
+    margin-left: 88px;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    margin-left: 93px;
+  }
 
   &__item:not(:last-child) {
     margin-right: 50px;
@@ -58,28 +69,71 @@
 }
 
 .contacts {
-  display: flex;
-  align-items: center;
   margin-left: auto;
 
+  @include mq(tablet-only) {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    align-items: center;
+  }
+
   &__item:not(:last-child) {
-    margin-right: 50px;
+    @include mq(tablet-only) {
+      margin-bottom: 10px;
+    }
+
+    @include mq(desktop) {
+      margin-right: 50px;
+    }
   }
 
   &__link {
-    display: flex;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    @include mq(tablet) {
+      display: flex;
+      align-items: center;
 
-    color: var(--primary-text-color);
-    text-decoration: none;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      color: var(--primary-text-color);
+      text-decoration: none;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @include mq(desktop) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
   }
 
   &__icon {
+    @include mq(tablet-only) {
+      margin-right: 8px;
+    }
+
     margin-right: 10px;
     fill: currentColor;
+  }
+
+  &__icon--mail {
+    width: 14px;
+    height: 10px;
+
+    @include mq(desktop) {
+      width: 16px;
+      height: 12px;
+    }
+  }
+
+  &__icon--phone {
+    width: 10px;
+    height: 14px;
+
+    @include mq(desktop) {
+      height: 16px;
+    }
   }
 
   &__link:hover,
@@ -88,4 +142,32 @@
   &__icon:focus {
     color: var(--accent-color);
   }
+}
+
+.header-btn {
+  display: none;
+  margin-left: auto;
+  padding: 0;
+
+  background-color: transparent;
+  z-index: 1;
+  @include mq(mobile-only) {
+    display: block;
+  }
+}
+
+.header-btn__icon {
+  display: block;
+}
+
+.header-btn__icon--close {
+  display: none;
+}
+
+.header-btn.is-open .header-btn__icon--close {
+  display: block;
+}
+
+.header-btn.is-open .header-btn__icon--open {
+  display: none;
 }

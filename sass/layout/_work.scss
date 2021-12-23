@@ -1,4 +1,12 @@
 /* Чем мы занимаемся */
+.work {
+  display: none;
+
+  @include mq(desktop) {
+    display: block;
+  }
+}
+
 .work__list {
   display: flex;
 }

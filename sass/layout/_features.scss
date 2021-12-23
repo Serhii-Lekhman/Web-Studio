@@ -1,20 +1,38 @@
 /* Особенности */
-.features__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
+.features {
+  @include mq(not-desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .features__list {
-  display: flex;
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: -15px;
+  }
 }
 
 .features__item {
-  width: 270px;
+  @include mq(mobile-only) {
+    max-width: 450px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include mq(tablet) {
+    max-width: 354px;
+    margin: 15px;
+    flex-basis: calc(100% / 2-30);
+  }
+
+  @include mq(desktop) {
+    max-width: 270px;
+    flex-basis: calc(100% / 3-30);
   }
 }
 
@@ -29,6 +47,16 @@
   background: var(--second-bcg-cl);
   border-radius: 4px;
 }
+
+.features__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
 .no-padding-bottom {
-  padding-bottom: 0;
+  @include mq(desktop) {
+    padding-bottom: 0;
+  }
 }

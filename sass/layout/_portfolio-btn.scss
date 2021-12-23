@@ -1,11 +1,21 @@
 /* Кнопки портфолио 2 страница */
 .filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-bottom: 40px;
 
-  &__el:not(:last-child) {
-    margin-right: 8px;
+  @include mq(tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
+
+  &__el {
+    margin: 8px;
   }
 }
 

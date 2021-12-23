@@ -4,13 +4,30 @@
 
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   text-decoration: none;
+  font-size: 24px;
+  line-height: 1.17;
+
+  @include mq(desktop) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 
   &--header {
-    padding-top: 24px;
-    padding-bottom: 25px;
+    @include mq(mobile-only) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    @include mq(tablet-only) {
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+
+    @include mq(desktop) {
+      padding-top: 24px;
+      padding-bottom: 25px;
+    }
   }
 
   &__inner--color-dark {

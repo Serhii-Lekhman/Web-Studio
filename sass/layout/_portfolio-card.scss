@@ -1,9 +1,10 @@
 /* Примеры работ портфолио 2 страница */
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 
   &__link {
     text-decoration: none;
@@ -26,6 +27,38 @@
     opacity: 0;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
       opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .cards__el {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    max-width: 450px;
+
+    @include mq(tablet) {
+      margin: 15px;
+      max-width: 354px;
+      // margin: 15px;
+      flex-basis: calc(100% / 2-30);
+    }
+
+    @include mq(desktop) {
+      max-width: 370px;
+      flex-basis: calc(100% / 3-30);
+    }
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background: #ffffff;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
   }
 
   .cards__link:hover &__overlay {
@@ -67,22 +100,6 @@
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
     border-left: 1px solid #eeeeee;
-  }
-}
-
-.cards__el {
-  margin-right: 30px;
-  margin-bottom: 30px;
-  flex-basis: calc(100% / 3-30);
-
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    background: #ffffff;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 }
 
