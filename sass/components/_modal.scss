@@ -17,8 +17,9 @@
   top: 50%;
   left: 50%;
 
-  min-width: 450px;
+  max-width: 450px;
   min-height: 609px;
+  padding: 40px;
 
   @include mq(desktop) {
     min-width: 528px;
@@ -72,7 +73,6 @@
 
 .modal__title {
   margin-bottom: 12px;
-  padding-top: 40px;
 
   font-weight: 700;
   font-size: 20px;
@@ -80,12 +80,6 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-}
-
-.modal__form {
-  padding-left: 40px;
-  padding-bottom: 40px;
-  padding-right: 40px;
 }
 
 .modal__data {
@@ -163,12 +157,21 @@
 
   &::before {
     content: "";
-    width: 40px;
-    height: 22px;
+    width: 73px;
+    height: 20px;
     border: 1px solid #999999;
     border-radius: 50px;
     margin-right: 5px;
     transition: background-color 300ms linear;
+
+    @include mq(tablet) {
+      width: 54px;
+      height: 21px;
+    }
+    @include mq(desktop) {
+      width: 40px;
+      height: 22px;
+    }
   }
 
   &::after {
@@ -177,11 +180,21 @@
     height: 18px;
     background-color: #c6cbe0;
     position: absolute;
-    left: 3px;
-    top: 3px;
+
+    left: 0px;
+    top: 27px;
     border-radius: 50%;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
       background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include mq(tablet) {
+      left: 1px;
+      top: 15px;
+    }
+    @include mq(desktop) {
+      left: 3px;
+      top: 3px;
+    }
   }
 
   .modal__check:checked + &::after {

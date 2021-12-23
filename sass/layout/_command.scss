@@ -34,6 +34,16 @@
       max-width: 270px;
       flex-basis: calc(100% / 3-30);
     }
+
+    @include mq(mobile-only) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item:last-child {
+    @include mq(mobile-only) {
+      margin-bottom: 0;
+    }
   }
 
   &__name {

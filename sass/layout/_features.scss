@@ -53,6 +53,18 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+
+  @include mq(mobile-only) {
+    text-align: center;
+  }
+
+  @include mq(tablet) {
+    text-align: start;
+  }
+}
+
+.features__text {
+  text-align: start;
 }
 
 .no-padding-bottom {
