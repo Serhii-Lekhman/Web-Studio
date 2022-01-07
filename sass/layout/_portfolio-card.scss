@@ -91,7 +91,7 @@
   }
 
   &__text {
-    color: var(--primary-text-color);
+    color: $primaryTextColor;
     font-size: 16px;
     line-height: 1.88;
   }

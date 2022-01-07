@@ -1,6 +1,6 @@
 /* Наша команда */
 .command {
-  background-color: var(--second-bcg-cl);
+  background-color: $secondBcgColor;
 
   @include mq(not-desktop) {
     padding-top: 60px;

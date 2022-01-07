@@ -12,7 +12,7 @@
 
   width: 100vw;
   height: 100vh;
-  background-color: var(--primary-white-color);
+  background-color: $whiteColor;
   padding: 48px 40px;
 
   visibility: visible;
@@ -39,10 +39,10 @@
   font-size: 40px;
   line-height: 1.175;
   letter-spacing: 0.02em;
-  color: var(--title-text-color);
+  color: $secondTextColor;
 
   &--current {
-    color: var(--accent-color);
+    color: $accentColor;
   }
 }
 
@@ -60,13 +60,13 @@
   line-height: 1.17;
   letter-spacing: 0.02em;
 
-  color: var(--primary-text-color);
+  color: $primaryTextColor;
 
   &.phone {
     font-size: 34px;
     line-height: 1.18;
 
-    color: var(--accent-color);
+    color: $accentColor;
   }
 }
 
@@ -98,6 +98,6 @@
     line-height: 1.22;
     letter-spacing: 0.02em;
 
-    color: var(--accent-color);
+    color: $accentColor;
   }
 }

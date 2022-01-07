@@ -3,7 +3,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  background-color: var(--footer-bcg-cl);
+  background-color: $footerBcgColor;
 
   &__container {
     display: flex;
@@ -51,7 +51,7 @@
   }
 
   &__map {
-    color: var(--primary-white-color);
+    color: $whiteColor;
     text-decoration: none;
     font-style: normal;
   }
@@ -66,7 +66,7 @@
 
   &:hover,
   &:focus {
-    color: var(--accent-color);
+    color: $accentColor;
   }
 }
 
@@ -135,7 +135,8 @@
     margin-bottom: 0;
   }
 
-  background-color: var(--footer-bcg-cl);
+  color: $whiteColor;
+  background-color: $footerBcgColor;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;

@@ -63,7 +63,7 @@
 
   &:hover,
   &:focus {
-    color: var(--accent-color);
+    color: $accentColor;
   }
 }
 
@@ -79,7 +79,7 @@
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--title-text-color);
+  color: $secondTextColor;
 }
 
 .modal__data {
@@ -93,7 +93,7 @@
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: var(--primary-text-color);
+  color: $primaryTextColor;
 }
 
 .input__wrap {
@@ -117,7 +117,7 @@
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:focus {
-    border-color: var(--accent-color);
+    border-color: $accentColor;
   }
 }
 
@@ -127,10 +127,10 @@
   top: 50%;
   transform: translateY(-50%);
 
-  color: var(--title-text-color);
+  color: $secondTextColor;
 
   .modal__input:focus + & {
-    fill: var(--accent-color);
+    fill: $accentColor;
   }
 }
 
@@ -203,11 +203,11 @@
   }
 
   .modal__check:checked + &::before {
-    background-color: var(--accent-color);
+    background-color: $accentColor;
   }
 }
 
 .check__link {
-  color: var(--accent-color);
+  color: $accentColor;
   margin-left: 5px;
 }

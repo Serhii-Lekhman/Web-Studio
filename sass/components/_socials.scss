@@ -31,7 +31,7 @@
   &:hover,
   &:focus {
     color: #ffffff;
-    background-color: var(--accent-color);
+    background-color: $accentColor;
   }
 }
 
@@ -43,6 +43,6 @@
 
   &:hover,
   &:focus {
-    background-color: var(--accent-color);
+    background-color: $accentColor;
   }
 }
