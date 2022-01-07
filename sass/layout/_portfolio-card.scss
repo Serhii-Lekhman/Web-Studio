@@ -30,13 +30,15 @@
   }
 
   .cards__el {
-    margin-bottom: 30px;
+    @include mq(mobile-only) {
+      margin-bottom: 30px;
 
-    &:last-child {
-      margin-bottom: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      max-width: 450px;
     }
-
-    max-width: 450px;
 
     @include mq(tablet) {
       margin: 15px;

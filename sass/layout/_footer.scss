@@ -12,8 +12,8 @@
       flex-direction: column;
     }
 
-    @include mq(mobile) {
-      justify-content: baseline;
+    @include mq(tablet) {
+      align-items: baseline;
     }
 
     @include mq(tablet-only) {
