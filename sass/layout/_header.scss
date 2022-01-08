@@ -150,7 +150,7 @@
   padding: 0;
 
   background-color: transparent;
-  z-index: 1;
+
   @include mq(mobile-only) {
     display: block;
   }
