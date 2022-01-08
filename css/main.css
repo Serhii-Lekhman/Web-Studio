@@ -712,6 +712,10 @@ button {
   }
 }
 
+.header-btn.is-open {
+  z-index: 2;
+}
+
 .header-btn__icon {
   display: block;
 }
