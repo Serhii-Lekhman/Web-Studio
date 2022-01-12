@@ -27,12 +27,12 @@
     @include mq(tablet) {
       max-width: 354px;
       margin: 15px;
-      flex-basis: calc(100% / 2-30);
+      flex-basis: calc(100% / 2 - 30px);
     }
 
     @include mq(desktop) {
       max-width: 270px;
-      flex-basis: calc(100% / 3-30);
+      flex-basis: calc(100% / 3 - 30px);
     }
 
     @include mq(mobile-only) {

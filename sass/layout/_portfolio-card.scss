@@ -44,12 +44,12 @@
       margin: 15px;
       max-width: 354px;
       // margin: 15px;
-      flex-basis: calc(100% / 2-30);
+      flex-basis: calc(100% / 2 - 30px);
     }
 
     @include mq(desktop) {
       max-width: 370px;
-      flex-basis: calc(100% / 3-30);
+      flex-basis: calc(100% / 3 - 30px);
     }
 
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -116,7 +116,7 @@
 }*/
 
 /* .content-items-el {
-  width: calc((100%-60px) / 3);
+  width: calc((100% - 60px) / 3);
 } */
 
 /* .content-items-el:not(:nth-child(3n)) {
