@@ -12,6 +12,10 @@
   text-align: center;
   margin: -15px;
   justify-content: center;
+
+  @include mq(desktop) {
+    flex-wrap: nowrap;
+  }
 }
 
 .clients__item {
